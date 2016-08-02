@@ -1,0 +1,33 @@
+.load-container
+  height: 49px
+  text-align: center
+  opacity: 0
+  animation: show-container 1s 1 linear
+  animation-fill-mode: forwards
+  &.center
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    margin: auto
+
+.load-speeding-wheel
+  width: 49px
+  height: 49px
+  margin: 0 auto
+  border: 3px solid #656D78
+  border-radius: 50%
+  border-left-color: transparent
+  border-right-color: transparent
+  animation: load-spin 575ms infinite linear
+
+@keyframes show-container
+  30%
+    opacity: 0
+  100%
+    opacity: 1
+
+@keyframes load-spin
+  100%
+    transform: rotate(360deg)
